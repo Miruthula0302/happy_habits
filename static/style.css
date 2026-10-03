@@ -1,0 +1,227 @@
+/* 🌈 Background */
+body {
+  background: linear-gradient(#eef6ff, #dcecff);
+  font-family: "Comic Sans MS", Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Title */
+h1 {
+  color: #4a6cff;
+  font-size: 40px;
+  text-shadow: 2px 2px #c7d7ff;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.left, .center, .right {
+  width: 30%;
+}
+
+/* Buttons */
+button {
+  padding: 18px;
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+  background: #ffd966;
+  margin: 12px;
+  cursor: pointer;
+  width: 80%;
+  transition: 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+button:hover {
+  background: #ffe58f;
+  transform: scale(1.05);
+}
+
+/* Highlight selected habit */
+button.active {
+  background: #ffeb99;
+  border: 3px solid #ffd042;
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(255, 208, 66, 0.6);
+}
+
+/* Camera */
+.camera-wrapper {
+  position: relative;
+}
+
+video, img {
+  width: 100%;
+  border-radius: 25px;
+  border: 6px solid #a4c2f4;
+  outline: 4px dashed #cfe2ff;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Camera active glow */
+.camera-active {
+  box-shadow: 0 0 20px #a4c2f4;
+  transition: 0.3s ease;
+}
+
+/* Results */
+#result {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+#message {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Cloud-Puppy feedback box */
+#cloudPuppy {
+  background: #f3f7ff;
+  border-radius: 25px;
+  padding: 20px;
+  border: 4px solid #cfe2ff;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  animation: fadeIn 0.6s ease;
+}
+
+#puppyMessage {
+  font-size: 22px;
+  color: #4a6cff;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Cloud-Puppy breathing animation */
+.puppy-breathe {
+  animation: breathe 3s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+/* Habit Themes */
+.theme-eating {
+  background: #ffe9d6;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.theme-brushing {
+  background: #e0f7ff;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.theme-cleanhands {
+  background: #e8faff;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.theme-praying {
+  background: #fff7e6;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+/* Progress Bar */
+#progressBar {
+  width: 80%;
+  height: 20px;
+  background: #dfe8ff;
+  border-radius: 20px;
+  margin: 15px auto;
+  display: none;
+}
+
+#progressFill {
+  height: 100%;
+  width: 0%;
+  background: #a4c2f4;
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+/* Sticker Book */
+#stickerBook {
+  margin-top: 30px;
+}
+
+#stickerGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.sticker {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  background: #ffffff;
+  border: 3px solid #cfe2ff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  animation: popIn 0.4s ease;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.4); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease;
+}
+
+/* Confetti */
+.confetti {
+  position: fixed;
+  top: -10px;
+  width: 10px;
+  height: 10px;
+  background: #ffcc00;
+  opacity: 0.8;
+  border-radius: 50%;
+  animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+/* Stars */
+.star {
+  position: fixed;
+  font-size: 40px;
+  animation: floatUp 2s ease-out forwards;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-120px); opacity: 0; }
+}

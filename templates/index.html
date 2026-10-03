@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Habits</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>🌟 Happy Habits 🌟</h1>
+
+<div class="container">
+
+  <!-- LEFT PANEL -->
+  <div class="left">
+    <button onclick="openActivity('eating')">🍽 Eating</button>
+    <button onclick="openActivity('brushing')">🪥 Brushing</button>
+    <button onclick="openActivity('cleanhands')">✋💧 Clean Hands</button>
+    <button onclick="openActivity('praying')">🙏 Praying</button>
+  </div>
+
+  <!-- CENTER PANEL -->
+  <div class="center" id="centerPanel">
+
+    <h2 id="activityTitle">Choose an activity</h2>
+
+    <!-- Instruction Video -->
+    <video id="instructionVideo" width="400" style="display:none; margin-top:20px;" controls>
+      <source id="videoSource" src="" type="video/mp4">
+    </video>
+
+    <!-- Progress Bar -->
+    <div id="progressBar" style="display:none;">
+      <div id="progressFill"></div>
+    </div>
+
+    <h2 id="countdown"></h2>
+
+    <button id="practiceBtn" hidden onclick="startPractice()">▶ Start Practice</button>
+
+    <h2 id="result"></h2>
+    <p id="message"></p>
+
+    <!-- Cloud-Puppy emotional feedback -->
+    <div id="cloudPuppy" style="display:none; margin-top:20px; text-align:center;">
+      <img id="puppyImage" src="" width="150">
+      <p id="puppyMessage"></p>
+    </div>
+
+    <button id="backBtn" hidden onclick="goHome()">⬅ Back</button>
+
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="right">
+    <div class="camera-wrapper">
+      <video id="camera" autoplay muted></video>
+    </div>
+    <button onclick="startCamera()">📸 Turn Camera On</button>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Sticker Book -->
+<div id="stickerBook">
+  <h2>🌈 My Stickers</h2>
+  <div id="stickerGrid"></div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
