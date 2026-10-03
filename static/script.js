@@ -94,19 +94,19 @@ function openActivity(activity) {
 
   if (activity === "eating") {
     title.innerText = "🍽 Eating Practice";
-    src.src = "https://res-console.cloudinary.com/afnarp2z/thumbnails/transform/v1/video/upload/Zl9hdXRvLHFfYXV0bw==/v1/ZWF0aW5n/template";
+    src.src = "/static/videos/eating.mp4";
 
   } else if (activity === "brushing") {
     title.innerText = "🪥 Brushing Practice";
-    src.src = "https://res-console.cloudinary.com/afnarp2z/thumbnails/transform/v1/video/upload/Zl9hdXRvLHFfYXV0bw==/v1/YnJ1c2hpbmc=/template";
+    src.src = "/static/videos/brushing.mp4";
 
   } else if (activity === "cleanhands") {
     title.innerText = "✋💧 Clean Hands Practice";
-    src.src = "https://res-console.cloudinary.com/afnarp2z/thumbnails/transform/v1/video/upload/Zl9hdXRvLHFfYXV0bw==/v1/Y2xlYW5oYW5kcw==/template";
+    src.src = "/static/videos/cleanhands.mp4";
 
   } else if (activity === "praying") {
     title.innerText = "🙏 Praying Practice";
-    src.src = "https://res-console.cloudinary.com/afnarp2z/thumbnails/transform/v1/video/upload/Zl9hdXRvLHFfYXV0bw==/v1/cHJheWluZw==/template";
+    src.src = "/static/videos/praying.mp4";
   }
 
   videoDemo.load();
